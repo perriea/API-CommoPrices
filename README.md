@@ -64,11 +64,24 @@ Exemple : `http://localhost:8000/api/var/nc8_18010000?country=it&start=1-2014&en
 [Réponse var]
 
 
-### Graphiques
+Graphiques
+----------
 
 Vous pouvez afficher un graphique avec les données de l'API.
 
 Exemple : `http://localhost:8000/graph/{matiere}`
+
+
+Vous devez inscrire l'utilisateur et le token de l'utilisateur dans `graph.js`.
+
+``` js
+var log = "{user}";
+    token = "{token}";
+    res = 0;
+    prix_max = 0;
+    prix_min = 9999999999;
+    theme = "dark";
+```
 
 
 Resources
