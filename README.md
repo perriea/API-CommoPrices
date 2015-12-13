@@ -3,13 +3,13 @@ API CommoPrices
 
 Le projet CommoPrices API a été lancé lors du [Sandwich Class Camp] 2 à l'[ETNA] par l'entreprise [CommoPrices].
 
-Celui-ci à pour but de generer un fichier au format [JSON] contenant les informations des marchés des matières premières et autres.
+Celui-ci à pour but de générer un fichier au format [JSON] contenant les informations des marchés des matières premières et autres.
 
 
 Installation
 ------------
 
-Remplacer les fichiers par ceux du Git ([dossier]) et lancer [Laravel].
+Remplacer les fichiers par ceux du Git ([dossier]) et lancer [Laravel] (`php artisan serve`).
 
 Si vous souhaitez rajouter d'autres choses :
 - [Middleware] : `php artisan make:middleware`
