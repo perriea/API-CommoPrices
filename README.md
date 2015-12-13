@@ -26,7 +26,7 @@ Pour acceder à l'API, vous devez être obligatoirement authentifié, voici la m
 
 `http://localhost:8000/api/auth/{user}/{token}`
 
-Resultat possibles :
+[Réponse auth]
 
 
 ### Fermeture d'une session (logout)
@@ -34,6 +34,8 @@ Resultat possibles :
 Après avoir fait toutes vos demandes vous pouvez fermer votre session :
 
 `http://localhost:8000/api/logout`
+
+[Réponse logout]
 
 
 ### Afficher data (show)
@@ -47,6 +49,8 @@ Avec cette methode vous pouvez afficher les données et filtrer via differents p
 - **lang** (GET, accessible NC8 & IMF) : afficher les données dans la langue de votre choix.
 
 Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1-2014&end=3-2015&lang=fr`
+
+[Réponse show]
 
 
 ### Afficher uniquement les variation (var)
@@ -89,3 +93,6 @@ Released under the [MIT License].
 [dossier]: https://github.com/perriea/API-CommoPrices/tree/master/Laravel
 [ISO 3166-1]: http://www.iso.org/iso/fr/french_country_names_and_code_elements
 [MIT License]: http://mit-license.org/
+[Réponse auth]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Auth/ok.json
+[Réponse logout]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Auth/fail.json
+[Réponse show]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Show/reponse.json
