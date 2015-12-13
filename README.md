@@ -3,7 +3,7 @@ API CommoPrices
 
 Le projet CommoPrices API a été lancé lors du [Sandwich Class Camp] 2 à l'[ETNA] par l'entreprise [CommoPrices].
 
-Celui-ci à pour but de generer un fichier au format JSON contenant les informations des marchés des matières premières et autres.
+Celui-ci à pour but de generer un fichier au format [JSON] contenant les informations des marchés des matières premières et autres.
 
 
 Installation
@@ -100,3 +100,4 @@ Released under the [MIT License].
 [Réponse var]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Var/reponse.json
 [PHP 5]: http://php.net
 [MYSQL]: https://www.mysql.fr
+[JSON]: http://www.json.org
