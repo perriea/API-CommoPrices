@@ -58,7 +58,10 @@ class API extends Controller
         else
             $sql .= " FROM `api_imf_liste` WHERE code_imf = '" . $mat . "'";
         $info = $this->store($sql);
-        return $info[0];
+        if (!isset($info[0])) 
+            return $info[0];
+        else
+            return (NULL);
     }
 
     public function get_sql_res($mat, $req)

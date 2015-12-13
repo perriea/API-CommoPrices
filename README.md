@@ -26,6 +26,8 @@ Pour acceder à l'API, vous devez être obligatoirement authentifié, voici la m
 
 `http://localhost:8000/api/auth/{user}/{token}`
 
+Resultat possibles :
+
 
 ### Fermeture d'une session (logout)
 
