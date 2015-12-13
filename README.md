@@ -57,7 +57,9 @@ Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1
 
 Cette méthode permet d'afficher seulement la variation en pourcent d'une matiere dans un interval.
 
-Exemple : `http://localhost:8000/api/var/nc8_89937423`
+Exemple : `http://localhost:8000/api/var/nc8_18010000?country=it&start=1-2014&end=3-2015&lang=fr`
+
+[Réponse var]
 
 
 Resources
@@ -95,5 +97,6 @@ Released under the [MIT License].
 [Réponse auth]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Auth/ok.json
 [Réponse logout]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Auth/fail.json
 [Réponse show]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Show/reponse.json
+[Réponse var]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Var/reponse.json
 [PHP 5]: http://php.net
 [MYSQL]: https://www.mysql.fr
