@@ -46,7 +46,7 @@ Avec cette methode vous pouvez afficher les données et filtrer via differents p
 - **inter** (GET, accessible NC8 & IMF) :
 - **lang** (GET, accessible NC8 & IMF) : afficher les données dans la langue de votre choix.
 
-Exemple : `http://localhost:8000/api/show/nc8_79676756?flux=e&country=fr&start=1=2012&end=3-2012&lang=fr`
+Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1-2014&end=3-2015&lang=fr`
 
 
 ### Afficher uniquement les variation (var)
