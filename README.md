@@ -3,13 +3,13 @@ API CommoPrices
 
 Le projet CommoPrices API a été lancé lors du [Sandwich Class Camp] 2 à l'[ETNA] par l'entreprise [CommoPrices].
 
-Celui-ci à pour but de generer un fichier au format JSON contenant les information des marchés des matieres premières et autres.
+Celui-ci à pour but de generer un fichier au format JSON contenant les informations des marchés des matières premières et autres.
 
 
 Installation
 ------------
 
-Remplacer les fichiers par ceux du Git et lancer [Laravel].
+Remplacer les fichiers par ceux du Git ([dossier]) et lancer [Laravel].
 
 Si vous souhaitez rajouter d'autres choses :
 - Middleware : `php artisan make:middleware`
@@ -36,6 +36,11 @@ Après avoir fait toutes vos demandes vous pouvez fermer votre session :
 
 ### Afficher data (show)
 
+Avec cette methode vous pouvez afficher les données et filtrer via differents paramètres : 
+- flux (GET) : **i** (import) ou **e** (export),
+- country (GET) : code [ISO 3166-1],
+- start & end (GET) : date de debut et de fin (il n'est pas obligatoire d'utiliser les deux en meme temps) au format M-YYYY,
+- lang (GET) : afficher les données dans la langue de votre choix.
 
 
 
@@ -49,3 +54,5 @@ Après avoir fait toutes vos demandes vous pouvez fermer votre session :
 [ETNA]: http://www.etna-alternance.net
 [CommoPrices]: https://commoprices.com/
 [Laravel]: http://laravel.com
+[dossier]: https://github.com/perriea/API-CommoPrices/tree/master/Laravel
+[ISO 3166-1]: http://www.iso.org/iso/fr/french_country_names_and_code_elements
