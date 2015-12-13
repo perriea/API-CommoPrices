@@ -57,6 +57,8 @@ Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1
 
 Cette méthode permet d'afficher seulement la variation en pourcent d'une matiere dans un interval.
 
+Tous les parametres peuvent être utilise sauf **flux**.
+
 Exemple : `http://localhost:8000/api/var/nc8_18010000?country=it&start=1-2014&end=3-2015&lang=fr`
 
 [Réponse var]
