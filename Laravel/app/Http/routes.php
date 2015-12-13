@@ -11,11 +11,22 @@
 |
 */
 
+/*
+** Accueil
+** Input : none
+** Output : none
+*/
 Route::get('/', function () {
     return view('welcome');
 });
 
 
+/*
+** Authentification
+** Input : user, token
+** Output : JSON
+** Creation d'une session API
+*/
 Route::get('/api/auth/{user}/{token}', 'Auth\AuthController@getLogin', function ($tokenId) {
 	Route::controller(
 		'auth', 'Auth\AuthController', 
@@ -24,9 +35,22 @@ Route::get('/api/auth/{user}/{token}', 'Auth\AuthController@getLogin', function 
     return view('api');
 });
 
+
+/*
+** Logout
+** Input : none
+** Output : JSON
+** Destruction de la session en cours
+*/
 Route::get('/api/logout', 'Auth\AuthController@getLogout');
 
 
+/*
+** API
+** Input : SESSION, methode & matiere
+** Output : JSON
+** Afficher les donnees de l'API seulement si on est auth.
+*/
 Route::group(['middleware' => 'auth.api'], function () {
 	Route::get('/api/{meth}/{mat}', 'API@index', function ($matId) {
 		Route::controller('APIctrl', 'API', ['meth' => 'APIctrl.index', 'mat' => 'APIctrl.index']);

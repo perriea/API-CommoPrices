@@ -80,8 +80,8 @@ class AuthController extends Controller
      * @return Redirect
      */
     public function getLogout()
-    {
-        return response()->json(["auth" => "Logout", "name" => Session::get("username")]);
+    {   
         Session::flush();
+        return response()->json(["auth" => "Logout", "name" => Session::get("username")]);
     }
 }
