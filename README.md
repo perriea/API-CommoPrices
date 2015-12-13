@@ -45,7 +45,7 @@ Avec cette methode vous pouvez afficher les données et filtrer via differents p
 - **flux** (GET, accessible NC8) : **i** (import) ou **e** (export),
 - **country** (GET, accessible NC8) : code [ISO 3166-1],
 - **start** & **end** (GET, accessible NC8 & IMF) : date de debut et de fin (il n'est pas obligatoire d'utiliser les deux en meme temps) au format M-YYYY,
-- **inter** (GET, accessible NC8 & IMF) :
+- **inter** (GET, accessible NC8 & IMF) : mensuel, trimestriel ou annuel (m, t ou a),
 - **lang** (GET, accessible NC8 & IMF) : afficher les données dans la langue de votre choix.
 
 Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1-2014&end=3-2015&lang=fr`
