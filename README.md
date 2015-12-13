@@ -63,11 +63,10 @@ Exemple : `http://localhost:8000/api/var/nc8_89937423`
 Resources
 ---------
 
-- PHP 5
-- MYSQL
-- Composer (optionnel)
-- Laravel 5
-- Des celules grises :P
+- [PHP 5]
+- [MYSQL]
+- [Composer] (optionnel)
+- [Laravel]
 
 
 Thanks
@@ -96,3 +95,5 @@ Released under the [MIT License].
 [Réponse auth]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Auth/ok.json
 [Réponse logout]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Auth/fail.json
 [Réponse show]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Show/reponse.json
+[PHP 5]: http://php.net
+[MYSQL]: https://www.mysql.fr
