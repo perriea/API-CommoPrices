@@ -5,8 +5,6 @@ Le projet CommoPrices API a été lancé lors du [Sandwich Class Camp] 2 à l'[E
 
 Celui-ci à pour but de générer un fichier au format [JSON] contenant les informations des marchés des matières premières et autres.
 
-Voici le rendu :
-![alt tag](https://raw.githubusercontent.com/perriea/API-CommoPrices/master/Results/GRAPH/CAF%C3%89-PARAM.png)
 
 Installation
 ------------
