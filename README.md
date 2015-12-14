@@ -139,3 +139,4 @@ Released under the [MIT License].
 [PHP 5]: http://php.net
 [MYSQL]: https://www.mysql.fr
 [JSON]: http://www.json.org
+[View Laravel]: https://raw.githubusercontent.com/perriea/API-CommoPrices/master/Results/GRAPH/PALUM-PARAM.png
