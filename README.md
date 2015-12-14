@@ -76,7 +76,7 @@ Tous les parametres peuvent être utilise sauf **start** & **end**.
 
 Un nouveau parametre est disponible sur pour la variation : 
 
-- **inter** (GET, accessible NC8 & IMF) : mensuel, trimestriel ou annuel (m, t ou s),
+- **inter** (GET, accessible NC8 & IMF) : mensuel, trimestriel ou semistriel (m, t ou s) par defaut mensuel,
 
 
 Pour le parametre **flux** si l'on ne precise pas le sens, l'**export** sortira par defaut.
