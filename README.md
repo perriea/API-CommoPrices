@@ -10,7 +10,7 @@ Installation
 ------------
 
 ### API
-Remplacer les fichiers par ceux du Git ([dossier]) et lancer [Laravel] (`php artisan serve`).
+Remplacer les fichiers par ceux du Git ([dossier]) et lancer Laravel (`php artisan serve`).
 
 Si vous souhaitez rajouter d'autres choses :
 - [Middleware] : `php artisan make:middleware`
