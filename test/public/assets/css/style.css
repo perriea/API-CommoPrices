@@ -1,0 +1,29 @@
+body {
+	font-family: Tahoma,Arial,Verdana;
+	font-size: 12px;
+	color: black;
+}
+
+a:link {color: #84c4e2;}
+a:visited {color:#84c4e2;}
+a:hover {color: #cd82ad;}
+a:active {color: #84c4e2;}
+
+b, h1 {
+	text-align: center;
+	color: white;
+}
+
+h4 {
+	color: white;
+}
+
+h6 {
+	text-align: right;
+	color: white;
+}
+
+input {
+	text-align: center;
+	color: black;
+}
