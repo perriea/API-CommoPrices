@@ -22,6 +22,16 @@ Route::get('/', function () {
 
 
 /*
+** Afficher graph
+** Input : nom du materiau
+** Output graph
+*/
+Route::get('/graph/{mat}', function ($mat) {
+	return View::make('graph', array('mat' => $mat));
+});
+
+
+/*
 ** Authentification
 ** Input : user, token
 ** Output : JSON

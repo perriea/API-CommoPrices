@@ -66,6 +66,19 @@ function charts (data, prix_min, prix_max)
 }
 
 
+function affichage (data, variation) {
+    if (variation["variation"] > 0)
+        document.getElementById('var').innerHTML = "<h1>" + data["info"]["name_fr"] + "<img src='/assets/img/high.png'> " + variation["variation"] + "%</h1>";
+    else
+        document.getElementById('var').innerHTML = "<h1>" + data["info"]["name_fr"] + "<img src='/assets/img/low.png'> " + variation["variation"] + "%</h1>";
+
+    document.getElementById('start').innerHTML = "<h4>Prix départ : " + variation["previous price"] + "€</h4>";
+    document.getElementById('end').innerHTML = "<h4>Prix actuel : " + variation["current price"] + "€</h4>";
+    
+    document.getElementById('sources').innerHTML = "Source : " + data["info"]["source_fr"];
+}
+
+
 /*
 ** MAIN
 ** Methode de lancement 
@@ -80,6 +93,8 @@ function main (mat, params)
         var data = this.ajax("/api/show/" + mat + params);
         if (data["results"].length > 0) 
         {
+            var variation = this.ajax("/api/var/" + mat + params);
+            this.affichage(data, variation);
             for (var i = 0; i < data["results"].length; i++) 
             {
                 if (data["results"][i]["prix"] > prix_max) 
@@ -117,17 +132,17 @@ function params (mat)
     else
         flux = document.getElementById('myRadio2').value;
     var country = document.getElementById('country').value;
-    var start = document.getElementById('start').value; 
-    var end = document.getElementById('end').value; 
+    var start = document.getElementById('debut').value; 
+    var end = document.getElementById('fin').value; 
 
     if (flux !== '') 
         params = params + "flux=" + flux + "&";
     if (country !== '') 
         params = params + "country=" + country + "&";
-    if (start !== '') 
+    if (start != '') 
         params = params + "start=" + start + "&";
-    if (end !== '') 
+    if (end != '') 
         params = params + "end=" + end + "&";
-    params = params.substring(0,params.length - 1);
+    params = params.substring(0, params.length - 1);
     this.main(mat, params);
 }

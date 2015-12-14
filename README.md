@@ -9,12 +9,28 @@ Celui-ci à pour but de générer un fichier au format [JSON] contenant les info
 Installation
 ------------
 
+### API
 Remplacer les fichiers par ceux du Git ([dossier]) et lancer [Laravel] (`php artisan serve`).
 
 Si vous souhaitez rajouter d'autres choses :
 - [Middleware] : `php artisan make:middleware`
 - [Controlleur] : `php artisan make:controller`
 - [Migration] SQL : `php artisan make:migration`
+
+
+### Graphiques
+
+Dans le `<head>` de la view **graph** ajouter :
+``` html
+<link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+<script src="/assets/js/amcharts/amcharts.js" type="text/javascript"></script>
+<script src="/assets/js/amcharts/serial.js" type="text/javascript"></script>
+<script src="/assets/js/amcharts/themes/dark.js" type="text/javascript"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/graph.js"></script>
+```
+
+[View Laravel] 
 
 
 Utilisation

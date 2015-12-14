@@ -12,12 +12,18 @@
     </head>
 
     <body style="background-color:#3f3f4f;" onload="main('{{ $mat }}', '')">
-        <div>
-            <form id="myForm">
-                <div id="rates">
-                    <input type="radio" id="myRadio1" name="flux" value="i" checked><b>Import</b>
-                    <input type="radio" id="myRadio2" name="flux" value="e"><b>Export</b>
-                </div>
+        <h1 id="name"></h1>
+        <div id="infos">
+            <div id="var"></div>
+            <div id="start"></div>
+            <div id="end"></div>
+        </div>
+        <br>
+        <form id="myForm">
+            <div id="rates">
+                <input type="radio" id="myRadio1" name="flux" value="i" checked><b>Import</b>
+                <input type="radio" id="myRadio2" name="flux" value="e"><b>Export</b>
+                <br>
                 <select id="country">
                     <option value=''>Mondial</option>
                     <option value="BE">Belgique</option>
@@ -37,11 +43,12 @@
                     <option value="IT">Italie</option>
                     <option value="CH">Suisse</option>
                 </select>
-                <input type="text" id="start" placeholder="Date debut">
-                <input type="text" id="end" placeholder="Date de fin">
+                <input type="text" id="debut" placeholder="Date debut">
+                <input type="text" id="fin" placeholder="Date de fin">
                 <input type="button" value="Valider" onclick="params('{{ $mat }}')">
-            </form>
-        </div>
-        <div id="chartdiv" style="width: 100%; height: 400px;"></div>
+            </div>
+            <div id="chartdiv" style="width: 100%; height: 400px;"></div> 
+        </form>
+        <h6 id="sources"></h6>
     </body>
 </html>
