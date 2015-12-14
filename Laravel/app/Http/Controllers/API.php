@@ -11,11 +11,11 @@ use DB;
 
 class API extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    /*
+    ** Indique quel methode utiliser selon ce qui est indiqué dans l'URL
+    ** INPUT : methode & matiere
+    ** OUTPUT : JSON
+    */
     public function index($meth, $mat)
     {
         switch ($meth) {
@@ -32,15 +32,27 @@ class API extends Controller
         return ($json);
     }
 
+
+    /*
+    ** Formatage de la date envoyee
+    ** on recherche l'ID de la date dans la base SQL et on le renvoi
+    */
     public function get_date_id($date)
     {
         $date = date_create_from_format('n-Y|', $date);
         $date_first =  date_create("2012-01-01");
+        if ($date == false)
+            return false;
         $interval = date_diff($date_first, $date);
         $date_id = $interval->m + ($interval->y * 12);
         return $date_id;
     }
 
+
+    /*
+    ** On recherche les info sur le materiel
+    ** Regarde si on a un resultat et on le renvoi
+    */
     public function get_mat_info($mat)
     {
         if (isset($_GET["lang"])) {
@@ -53,20 +65,26 @@ class API extends Controller
         }
         else
             $sql = "SELECT name_fr, name_en, unite_fr, unite_en, source_fr, source_en";
-        if (strlen($mat) == 12) 
+        if (strlen($mat) == 12)
             $sql .= " FROM `api_customs_liste` WHERE nc8txt = '" . $mat . "'";
         else
             $sql .= " FROM `api_imf_liste` WHERE code_imf = '" . $mat . "'";
         $info = $this->store($sql);
-        if (!isset($info[0])) 
+        if (isset($info[0]))
             return $info[0];
         else
             return (NULL);
     }
 
+
+    /* 
+    ** Constitution de la requete par rapport au different parametre passé dans l'URL
+    ** On effectue la requete SQL a la fin
+    ** On renvoi le resultat de celle ci
+    */
     public function get_sql_res($mat, $req)
     {
-        if (strlen($mat) == 12) 
+        if (strlen($mat) == 12)
         {
             $sql =  "SELECT prix, volume, d.mois ,d.annee";
             if (!isset($_GET["flux"]))
@@ -100,11 +118,13 @@ class API extends Controller
         }
         if (isset($_GET["start"]) && $req == "show") {
             $start_id = $this->get_date_id($_GET["start"]);
-            $sql .= " AND d.id > " . $start_id;
+            if ($start_id != false)
+                $sql .= " AND d.id > " . $start_id;
         }
         if (isset($_GET["end"]) && $req == "show") {
             $end_id = $this->get_date_id($_GET["end"]);
-            $sql .= " AND d.id <= " . ++$end_id;
+            if ($end_id != false)
+                $sql .= " AND d.id <= " . ++$end_id;
         }
         if (!isset($_GET["flux"]) && strlen($mat) == 12)
             $sql .= " ORDER BY data.flux, d.id";
@@ -126,11 +146,11 @@ class API extends Controller
         return $res;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    /*
+    ** Recuperation des données SQL, on ecrit les variation du prix en % dans le JSON
+    ** Renvoi en JSON
+    */
     public function show($mat)
     {
         $info = $this->get_mat_info($mat);
@@ -147,6 +167,11 @@ class API extends Controller
             return response()->json(["http_response" => "200", "search" => $mat, "count" => $res_c, "results" => []]);
     }
 
+
+    /*
+    ** Calcul de la variation en %
+    ** Et on renvoi le JSON
+    */
     public function variation($mat)
     {
         $info = $this->get_mat_info($mat);
@@ -172,16 +197,12 @@ class API extends Controller
             return response()->json(["http_response" => "200", "search" => $mat, "results" => []]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+    /*
+    ** Effectue les requetes
+    */
     public function store($request)
     {
-        return DB::select(
-                    DB::raw($request)
-                );
+        return DB::select(DB::raw($request));
     }
 }
