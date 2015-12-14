@@ -12,6 +12,7 @@
     </head>
 
     <body style="background-color:#3f3f4f;" onload="main('{{ $mat }}', '')">
+        <a style="text-align: right;" href="https://commoprices.com" target="_blank"><img src="/assets/img/logo.png"></a>
         <h1 id="name"></h1>
         <div id="infos">
             <div id="var"></div>
