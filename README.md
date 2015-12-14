@@ -13,9 +13,9 @@ Installation
 Remplacer les fichiers par ceux du Git ([dossier]) et lancer Laravel (`php artisan serve`).
 
 Si vous souhaitez rajouter d'autres choses :
-- [Middleware] : `php artisan make:middleware`
-- [Controlleur] : `php artisan make:controller`
-- [Migration] SQL : `php artisan make:migration`
+- [Middleware] : `php artisan make:middleware {name}`
+- [Controlleur] : `php artisan make:controller {name}`
+- [Migration] SQL : `php artisan make:migration {name}`
 
 
 ### Graphiques
