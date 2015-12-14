@@ -38,7 +38,7 @@ Utilisation
 
 ### Ouverture d'une session (auth)
 
-Pour acceder à l'API, vous devez être obligatoirement authentifié, voici la méthode :
+Pour accéder à l'API, vous devez être obligatoirement authentifié, voici la méthode :
 
 `http://localhost:8000/api/auth/{user}/{token}`
 
@@ -56,11 +56,11 @@ Après avoir fait toutes vos demandes vous pouvez fermer votre session :
 
 ### Afficher data (show)
 
-Avec cette methode vous pouvez afficher les données et filtrer via differents paramètres : 
+Avec cette méthode vous pouvez afficher les données et filtrer via differents paramètres : 
 
 - **flux** (GET, accessible NC8) : **i** (import) ou **e** (export),
 - **country** (GET, accessible NC8) : code [ISO 3166-1],
-- **start** & **end** (GET, accessible NC8 & IMF) : date de debut et de fin (il n'est pas obligatoire d'utiliser les deux en meme temps) au format M-YYYY,
+- **start** & **end** (GET, accessible NC8 & IMF) : date de début et de fin (il n'est pas obligatoire d'utiliser les deux en même temps) au format M-YYYY,
 - **lang** (GET, accessible NC8 & IMF) : afficher les données dans la langue de votre choix.
 
 Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1-2014&end=3-2015&lang=fr`
@@ -70,16 +70,16 @@ Exemple : `http://localhost:8000/api/show/nc8_18010000?flux=e&country=it&start=1
 
 ### Afficher uniquement les variation (var)
 
-Cette méthode permet d'afficher seulement la variation en pourcent d'une matiere dans un interval.
+Cette méthode permet d'afficher seulement la variation en pourcent d'une matière dans un interval.
 
-Tous les parametres peuvent être utilise sauf **start** & **end**.
+Tous les paramètres peuvent être utilise sauf **start** & **end**.
 
-Un nouveau parametre est disponible sur pour la variation : 
+Un nouveau paramètre est disponible pour la variation : 
 
-- **inter** (GET, accessible NC8 & IMF) : mensuel, trimestriel ou semistriel (m, t ou s) par defaut mensuel,
+- **inter** (GET, accessible NC8 & IMF) : mensuel, trimestriel ou semestriel (m, t ou s) par défaut mensuel,
 
 
-Pour le parametre **flux** si l'on ne precise pas le sens, l'**export** sortira par defaut.
+Pour le paramètre **flux** si l'on ne précise pas le sens, l'**export** sortira par defaut.
 
 Exemple : `http://localhost:8000/api/var/nc8_18010000?country=it&start=1-2014&end=3-2015&lang=fr`
 
