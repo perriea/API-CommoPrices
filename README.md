@@ -113,6 +113,7 @@ Resources
 - [MYSQL]
 - [Composer] (optionnel)
 - [Laravel]
+- [AmCharts]
 
 
 Thanks
@@ -146,3 +147,4 @@ Released under the [MIT License].
 [MYSQL]: https://www.mysql.fr
 [JSON]: http://www.json.org
 [View Laravel]: https://raw.githubusercontent.com/perriea/API-CommoPrices/master/Results/GRAPH/PALUM-PARAM.png
+[AmCharts]: http://www.amcharts.com/
