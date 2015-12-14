@@ -81,7 +81,7 @@ function affichage (data, variation) {
 
 /*
 ** MAIN
-** Methode de lancement 
+** Methode de lancement + lancement du chargement des requete de l'API variation & show
 ** INPUT : Matiere + parametres
 ** OUTPUT : none
 */

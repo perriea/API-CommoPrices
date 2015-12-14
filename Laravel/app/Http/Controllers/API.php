@@ -11,11 +11,11 @@ use DB;
 
 class API extends Controller
 {
-    /*
-    ** Indique quel methode utiliser selon ce qui est indiqué dans l'URL
-    ** INPUT : methode & matiere
-    ** OUTPUT : JSON
-    */
+    /**
+     * Indique quel methode utiliser selon ce qui est indiqué dans l'URL
+     * INPUT : methode & matiere
+     * OUTPUT : JSON
+     */
     public function index($meth, $mat)
     {
         switch ($meth) {
@@ -32,11 +32,6 @@ class API extends Controller
         return ($json);
     }
 
-
-    /*
-    ** Formatage de la date envoyee
-    ** on recherche l'ID de la date dans la base SQL et on le renvoi
-    */
     public function get_date_id($date)
     {
         $date = date_create_from_format('n-Y|', $date);
@@ -48,11 +43,6 @@ class API extends Controller
         return $date_id;
     }
 
-
-    /*
-    ** On recherche les info sur le materiel
-    ** Regarde si on a un resultat et on le renvoi
-    */
     public function get_mat_info($mat)
     {
         if (isset($_GET["lang"])) {
@@ -76,12 +66,6 @@ class API extends Controller
             return (NULL);
     }
 
-
-    /* 
-    ** Constitution de la requete par rapport au different parametre passé dans l'URL
-    ** On effectue la requete SQL a la fin
-    ** On renvoi le resultat de celle ci
-    */
     public function get_sql_res($mat, $req)
     {
         if (strlen($mat) == 12)
@@ -146,11 +130,11 @@ class API extends Controller
         return $res;
     }
 
-
-    /*
-    ** Recuperation des données SQL, on ecrit les variation du prix en % dans le JSON
-    ** Renvoi en JSON
-    */
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function show($mat)
     {
         $info = $this->get_mat_info($mat);
@@ -167,11 +151,6 @@ class API extends Controller
             return response()->json(["http_response" => "200", "search" => $mat, "count" => $res_c, "results" => []]);
     }
 
-
-    /*
-    ** Calcul de la variation en %
-    ** Et on renvoi le JSON
-    */
     public function variation($mat)
     {
         $info = $this->get_mat_info($mat);
@@ -197,12 +176,16 @@ class API extends Controller
             return response()->json(["http_response" => "200", "search" => $mat, "results" => []]);
     }
 
-
-    /*
-    ** Effectue les requetes
-    */
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store($request)
     {
-        return DB::select(DB::raw($request));
+        return DB::select(
+                    DB::raw($request)
+                );
     }
 }
