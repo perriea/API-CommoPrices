@@ -10,9 +10,9 @@
 
 ### Middleware & Kernel
 
-Un nouveau middleware a été ajouté `midAPI.php` => [Lien Middleware API]
+Un nouveau middleware a été ajouté `app/Http/Middleware/midAPI.php` => [Lien Middleware API]
 
-Celui-ci a été declaré dans les Kernel => [Lien Kernel API]
+Celui-ci a été declaré dans `app/Http/Kernel.php` => [Lien Kernel API]
 
 Celui ci permet de reguler l'accès à l'API (auth ou non) dans les routes.
 
@@ -27,7 +27,7 @@ Un rendu en JSON => [JSON]
 ### Graphique
 
 Voici le rendu :
-![alt tag](https://github.com/perriea/API-CommoPrices/blob/master/Results/GRAPH/CAF%C9.png)
+![alt tag](https://raw.githubusercontent.com/perriea/API-CommoPrices/master/Results/GRAPH/CAF%C9.png)
 
 
 [Lien Middleware API]: https://github.com/perriea/API-CommoPrices/blob/master/Laravel/app/Http/Middleware/midAPI.php
