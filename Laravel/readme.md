@@ -27,7 +27,7 @@ Un rendu en JSON => [JSON]
 ### Graphique
 
 Voici le rendu :
-![alt tag](https://raw.githubusercontent.com/perriea/API-CommoPrices/master/Results/GRAPH/CAF%C9.png)
+![alt tag](https://raw.githubusercontent.com/perriea/API-CommoPrices/master/Results/GRAPH/PALUM-PARAM.png)
 
 
 [Lien Middleware API]: https://github.com/perriea/API-CommoPrices/blob/master/Laravel/app/Http/Middleware/midAPI.php
