@@ -21,7 +21,7 @@ Celui ci permet de reguler l'accès à l'API (auth ou non) dans les routes.
 
 ### API
 
-Un rendu en JSON => [JSON]
+Un rendu en JSON => [Resultat]
 
 
 ### Graphique
@@ -32,4 +32,4 @@ Voici le rendu :
 
 [Lien Middleware API]: https://github.com/perriea/API-CommoPrices/blob/master/Laravel/app/Http/Middleware/midAPI.php
 [Lien Kernel API]: https://github.com/perriea/API-CommoPrices/blob/master/Laravel/app/Http/Kernel.php
-[JSON]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Show/reponse.json
+[Resultat]: https://github.com/perriea/API-CommoPrices/blob/master/Results/JSON/Show/reponse.json
