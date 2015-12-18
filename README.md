@@ -1,5 +1,5 @@
-API CommoPrices
-===============
+API CommoPrices (Lauréat Décembre 2015)
+=======================================
 
 Le projet CommoPrices API a été lancé lors du [Sandwich Class Camp] 2 à l'[ETNA] par l'entreprise [CommoPrices].
 
